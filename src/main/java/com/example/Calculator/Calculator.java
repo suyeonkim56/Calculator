@@ -11,7 +11,6 @@ public class Calculator {
         String answer;
         while(true)
         {
-
             System.out.print("첫 번째 숫자를 입력하세요 : ");
             firstNumber =sc.nextInt();
             System.out.print("두 번째 숫자를 입력하세요 : ");
