@@ -18,12 +18,15 @@ public class main {
             secondNumber =sc.nextInt();
             System.out.print("사칙연산 기호를 입력하세요 : " );
             operator = sc.next();
-            cal.operating(firstNumber,secondNumber,operator.charAt(0));
+
+            cal.setCalculator(firstNumber, secondNumber, operator.charAt(0));
+            cal.operating();
 
             System.out.print("더 계산하시겠습니까? (exit 입력시 종료) : ");
-            answer = sc.nextLine();
+            answer = sc.next();
             if(answer.equals("exit"))
             {
+                cal.answering();
                 break;
             }
         }
