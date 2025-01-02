@@ -27,9 +27,11 @@ public class main {
             if(answer.equals("exit"))
             {
                 cal.answering();
+                System.out.print("첫번째 결과를 제외한 ");
+                cal.answerRemove();
+                cal.answering();
                 break;
             }
         }
     }
-
 }

@@ -10,6 +10,7 @@ public class Calculator {
     char operator;
 
     Calculator(){}
+
     void setCalculator(int firstNumber, int secondNumber, char operator){
         this.firstNumber = firstNumber;
         this. secondNumber = secondNumber;
@@ -53,5 +54,9 @@ public class Calculator {
         for(int answer : answers){
             System.out.print(answer + ", ");
         }
+    }
+
+    void answerRemove(){
+        answers.remove(0);
     }
 }
