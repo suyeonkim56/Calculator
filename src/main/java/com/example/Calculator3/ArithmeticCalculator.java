@@ -3,25 +3,49 @@ import java.util.ArrayList;
 
 public class ArithmeticCalculator {
     private ArrayList<Integer> answers = new ArrayList<Integer>();
-    int firstNumber;
-    int secondNumber;
-    char operator;
+    private int firstNumber;
+    private int secondNumber;
+    public OperatorType operation;
 
     ArithmeticCalculator(){}
 
     //값 setting
-    void setCalculator(int firstNumber, int secondNumber, char operator){
+    void setCalculator(int firstNumber, int secondNumber, OperatorType operation){
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
-        this.operator = operator;
+        this.operation = operation;
     }
 
-    //enum 작성
-    public enum OperatorType {
-        PLUS("+"), MINUS("-"), MULTIPLY("*"), DIVIDE("/");
-
-        OperatorType(String operator) {
-
+    //enum에 따른 사칙연산 수행
+    public int calculating()
+    {
+        switch(operation)
+        {
+            case PLUS:
+            {
+                int answer = firstNumber + secondNumber;
+                answers.add(answer);
+                return answer;
+            }
+            case MINUS:
+            {
+                int answer = firstNumber - secondNumber;
+                answers.add(answer);
+                return answer;
+            }
+            case MULTIPLY:
+            {
+                int answer = firstNumber * secondNumber;
+                answers.add(answer);
+                return answer;
+            }
+            case DIVIDE:
+            {
+                int answer = firstNumber / secondNumber;
+                answers.add(answer);
+                return answer;
+            }
+            default: return 0;
         }
     }
 
