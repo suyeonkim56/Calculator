@@ -16,6 +16,15 @@ public class Calculator {
         this. secondNumber = secondNumber;
         this.operator = operator;
     }
+
+    public enum OperatorType {
+        /* 구현 */
+    }
+
+    public class ArithmeticCalculator /* Hint */ {
+        /* 수정 */
+    }
+    
     void operating(){
         switch (operator)
         {

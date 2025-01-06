@@ -9,6 +9,7 @@ public class Calculator {
         int secondNumber;
         String operator;
         String answer;
+        // exit을 받을 때 까지 무한 반복
         while(true)
         {
             System.out.print("첫 번째 숫자를 입력하세요 : ");
