@@ -20,7 +20,6 @@ public class main {
             operator = sc.next();
 
             cal.setCalculator(firstNumber, secondNumber, operator.charAt(0));
-            cal.operating();
 
             System.out.print("더 계산하시겠습니까? (exit 입력시 종료) : ");
             answer = sc.next();

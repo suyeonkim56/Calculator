@@ -11,7 +11,7 @@ public class Calculator {
 
     Calculator(){}
 
-    //값 수정
+    //값 setting
     public void setCalculator(int firstNumber, int secondNumber, char operator){
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
