@@ -3,45 +3,45 @@ import java.util.ArrayList;
 
 public class ArithmeticCalculator {
     private ArrayList<Integer> answers = new ArrayList<Integer>();
-    private int firstNumber;
-    private int secondNumber;
+    private number<T> firstNumber;
+    private number<T> secondNumber;
     public OperatorType operation;
 
     ArithmeticCalculator(){}
 
     //값 setting
-    void setCalculator(int firstNumber, int secondNumber, OperatorType operation){
+    void setCalculator(number<T> firstNumber, number<T> secondNumber, OperatorType operation){
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
         this.operation = operation;
     }
 
-    //enum에 따른 사칙연산 수행
+    //enum 값에 따른 사칙연산 수행
     public int calculating()
     {
         switch(operation)
         {
             case PLUS:
             {
-                int answer = firstNumber + secondNumber;
+                int answer = firstNumber.intValue() + secondNumber.intValue();
                 answers.add(answer);
                 return answer;
             }
             case MINUS:
             {
-                int answer = firstNumber - secondNumber;
+                int answer = firstNumber.intValue() - secondNumber.intValue();
                 answers.add(answer);
                 return answer;
             }
             case MULTIPLY:
             {
-                int answer = firstNumber * secondNumber;
+                int answer = firstNumber.intValue() * secondNumber.intValue();
                 answers.add(answer);
                 return answer;
             }
             case DIVIDE:
             {
-                int answer = firstNumber / secondNumber;
+                int answer = firstNumber.intValue() / secondNumber.intValue();
                 answers.add(answer);
                 return answer;
             }
