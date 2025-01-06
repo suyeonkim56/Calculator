@@ -6,8 +6,8 @@ public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArithmeticCalculator cal = new ArithmeticCalculator();
-        number<T> firstNumber = new number<>();
-        number<T> secondNumber = new number<>();
+        number<Double> firstNumber = new number<>();
+        number<Double> secondNumber = new number<>();
         int number;
         String operator;
         String answer;
@@ -17,7 +17,7 @@ public class main {
             System.out.print("첫 번째 숫자를 입력하세요 : ");
             firstNumber.setValue(sc.nextDouble());
             System.out.print("두 번째 숫자를 입력하세요 : ");
-            secondNumber.setValue(sc.next());
+            secondNumber.setValue(sc.nextDouble());
             System.out.print("사칙연산 기호를 입력하세요 : " );
             operator = sc.next();
 
@@ -25,7 +25,7 @@ public class main {
             OperatorType operation = OperatorType.findbyString(operator.charAt(0));
 
             //class 값 설정
-            cal.setCalculator(firstNumber.getValue(), secondNumber.getValue(), operation);
+            cal.setCalculator(firstNumber.intValue(), secondNumber.intValue(), operation);
 
             //계산
             System.out.println(cal.calculating());

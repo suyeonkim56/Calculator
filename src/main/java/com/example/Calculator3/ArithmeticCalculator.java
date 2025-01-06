@@ -3,14 +3,14 @@ import java.util.ArrayList;
 
 public class ArithmeticCalculator {
     private ArrayList<Integer> answers = new ArrayList<Integer>();
-    private number<T> firstNumber;
-    private number<T> secondNumber;
+    private int firstNumber;
+    private int secondNumber;
     public OperatorType operation;
 
     ArithmeticCalculator(){}
 
     //값 setting
-    void setCalculator(number<T> firstNumber, number<T> secondNumber, OperatorType operation){
+    void setCalculator(int firstNumber, int secondNumber, OperatorType operation){
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
         this.operation = operation;
@@ -23,25 +23,25 @@ public class ArithmeticCalculator {
         {
             case PLUS:
             {
-                int answer = firstNumber.intValue() + secondNumber.intValue();
+                int answer = firstNumber + secondNumber;
                 answers.add(answer);
                 return answer;
             }
             case MINUS:
             {
-                int answer = firstNumber.intValue() - secondNumber.intValue();
+                int answer = firstNumber - secondNumber;
                 answers.add(answer);
                 return answer;
             }
             case MULTIPLY:
             {
-                int answer = firstNumber.intValue() * secondNumber.intValue();
+                int answer = firstNumber * secondNumber;
                 answers.add(answer);
                 return answer;
             }
             case DIVIDE:
             {
-                int answer = firstNumber.intValue() / secondNumber.intValue();
+                int answer = firstNumber / secondNumber;
                 answers.add(answer);
                 return answer;
             }

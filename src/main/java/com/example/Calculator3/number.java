@@ -16,4 +16,5 @@ public class number<T extends Number> {
         return value.intValue();
     }
 
+
 }
