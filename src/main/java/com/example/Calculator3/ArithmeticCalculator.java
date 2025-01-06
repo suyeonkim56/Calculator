@@ -1,8 +1,16 @@
 package com.example.Calculator3;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class ArithmeticCalculator {
+    //계산 결과들
     private ArrayList<Integer> answers = new ArrayList<Integer>();
+    //받은 값들
+    private ArrayList<Integer> numbers = new ArrayList<Integer>();
+
     private int firstNumber;
     private int secondNumber;
     public OperatorType operation;
@@ -24,24 +32,32 @@ public class ArithmeticCalculator {
             case PLUS:
             {
                 int answer = firstNumber + secondNumber;
+                numbers.add(firstNumber);
+                numbers.add(secondNumber);
                 answers.add(answer);
                 return answer;
             }
             case MINUS:
             {
                 int answer = firstNumber - secondNumber;
+                numbers.add(firstNumber);
+                numbers.add(secondNumber);
                 answers.add(answer);
                 return answer;
             }
             case MULTIPLY:
             {
                 int answer = firstNumber * secondNumber;
+                numbers.add(firstNumber);
+                numbers.add(secondNumber);
                 answers.add(answer);
                 return answer;
             }
             case DIVIDE:
             {
                 int answer = firstNumber / secondNumber;
+                numbers.add(firstNumber);
+                numbers.add(secondNumber);
                 answers.add(answer);
                 return answer;
             }
@@ -55,6 +71,15 @@ public class ArithmeticCalculator {
         for(int answer : answers){
             System.out.print(answer + ", ");
         }
+        System.out.print("\n입력한 값들보다 큰 결과들은 : ");
+        int max = Collections.max(numbers);
+        List<Integer> bigger = answers.stream().filter(x-> x>max).toList();
+
+        for(int big : bigger)
+        {
+            System.out.print(big+", ");
+        }
+        System.out.println("");
     }
 
     //사칙연산 값들 중 맨 첫번째 값을 제거
