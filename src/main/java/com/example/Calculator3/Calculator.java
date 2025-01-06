@@ -1,31 +1,22 @@
-package com.example.Calculator2;
+package com.example.Calculator3;
 
 import java.util.ArrayList;
 
 public class Calculator {
 
     private ArrayList<Integer> answers = new ArrayList<Integer>();
-    private int firstNumber;
-    private int secondNumber;
-    private char operator;
+    int firstNumber;
+    int secondNumber;
+    char operator;
 
     Calculator(){}
 
-    public void setCalculator(int firstNumber, int secondNumber, char operator){
+    void setCalculator(int firstNumber, int secondNumber, char operator){
         this.firstNumber = firstNumber;
-        this.secondNumber = secondNumber;
+        this. secondNumber = secondNumber;
         this.operator = operator;
     }
-
-    public enum OperatorType {
-        /* 구현 */
-    }
-
-    public class ArithmeticCalculator /* Hint */ {
-        /* 수정 */
-    }
-
-    public void operating(){
+    void operating(){
         switch (operator)
         {
             case '+':
